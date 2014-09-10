@@ -1,14 +1,63 @@
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+name: Biru C. Sainju
+description: Personal website
+url: "http://birusainju.com.np"
 
-# Build settings
+# Markdown rendering
 markdown: kramdown
+kramdown:
+  smart_quotes: apos,apos,quot,quot
+  parse_block_html: false
+
+# Site settings
+permalink: /blog/:title/
+relative_permalinks: false
+highlighter: pygments
+rel: "canonical"
+source: ./
+destination: ../master
+timezone: Asia/Kathmandu
+
+
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: true
+
+author:
+  name: Biru C. Sainju
+  email: sainju.biru@gmail.com
+  github: thugliffe
+  twitter: birusainju
+  #pinterest: asd123
+  linkedin: birusainju
+  bio: Your stylish, minimalist theme!
+  email_md5: 726351295ec82e145928582f595aa3aa
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
+
+
+## Publications and citations
+#scholar:
+#  style: apa
+#  locale: en
+
+# sort_by: none
+#  order: ascending
+
+  #source: ./_publications
+  #bibliography: citations.bib
+  #bibliography_template: "{{reference}}"
+
+#  replace_strings: true
+#  join_strings:    true
+
+#  details_dir:    bibliography
+#  details_layout: bibtex.html
+#  details_link:   Details
+
+#  query: "@*"
