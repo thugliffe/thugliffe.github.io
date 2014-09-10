@@ -1,63 +1,55 @@
-name: Biru C. Sainju
-description: Personal website
-url: "http://birusainju.com.np"
+# Site wide configuration
 
-# Markdown rendering
-markdown: kramdown
-kramdown:
-  smart_quotes: apos,apos,quot,quot
-  parse_block_html: false
+title:            My Personal Blog
+locale:           en_US
+url:              http://birusainju.com.np
 
-# Site settings
-permalink: /blog/:title/
-relative_permalinks: false
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
 highlighter: pygments
-rel: "canonical"
-source: ./
-destination: ../master
-timezone: Asia/Kathmandu
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
 
-
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: true
-
-author:
+# Site owner
+owner:
   name: Biru C. Sainju
-  email: sainju.biru@gmail.com
-  github: thugliffe
+  avatar: bio-photo.jpg
+  bio: "If life was easy,where would all the adventures be..."
+  email:
+  disqus-shortname: mypersonaltechblog
   twitter: birusainju
-  #pinterest: asd123
-  linkedin: birusainju
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  facebook: birusainju
+  google:
+    plus: #username
+    analytics: UA-54657091-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: thugliffe
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
 
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-
-BASE_PATH:
-
-
-## Publications and citations
-#scholar:
-#  style: apa
-#  locale: en
-
-# sort_by: none
-#  order: ascending
-
-  #source: ./_publications
-  #bibliography: citations.bib
-  #bibliography_template: "{{reference}}"
-
-#  replace_strings: true
-#  join_strings:    true
-
-#  details_dir:    bibliography
-#  details_layout: bibtex.html
-#  details_link:   Details
-
-#  query: "@*"
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
